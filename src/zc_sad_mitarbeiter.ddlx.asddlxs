@@ -1,0 +1,181 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Id'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Id'
+annotate view ZC_SAD_MITARBEITER with
+{
+  @EndUserText.label: 'Id'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @UI: { hidden: true }
+  Id;
+  
+  @EndUserText.label: 'Vollname'
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Vollname;
+  
+  @EndUserText.label: 'Rolle'
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Rolle;
+  
+  @EndUserText.label: 'Steuertarif'
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Steuertarif;
+  
+  @EndUserText.label: 'Gehalt'
+  @UI.identification: [ {
+    position: 50 
+  } ]
+  @UI.lineItem: [ {
+    position: 50 
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Gehalt;
+  
+  @EndUserText.label: 'WieAlt'
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  WieAlt;
+  
+  @EndUserText.label: 'Erfahrung'
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Erfahrung;
+  
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Wahrheitswert'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'ToggleKinder',
+    type: #FOR_ACTION,
+    dataAction: 'actKidActive'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Kinder;
+  
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Created By'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Created On'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Changed By'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  LastChangedAt;
+  
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Changed On'
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  LocalLastChangedAt;
+}

@@ -1,0 +1,13 @@
+CLASS zbp_i_sad_mitarbeiter DEFINITION
+  PUBLIC
+  ABSTRACT
+  FINAL
+  FOR BEHAVIOR OF zi_sad_mitarbeiter .
+
+  PUBLIC SECTION.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+CLASS zbp_i_sad_mitarbeiter IMPLEMENTATION.
+
+ENDCLASS.

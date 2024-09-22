@@ -1,0 +1,56 @@
+managed implementation in class ZBP_I_SAD_MITARBEITER unique;
+strict ( 2 );
+with draft;
+define behavior for ZI_SAD_MITARBEITER alias Mitarbeiter
+persistent table zsad_mitarbeiter
+draft table zsad_mitarbeit_d
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+authorization master ( global )
+
+{
+  field ( readonly )
+  Id,
+  Gehalt,
+  Steuertarif,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( numbering : managed )
+  Id;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  action actKidActive result [1] $self;
+  determination detSteuertarif on save { field Rolle; }
+  determination detGehalt on save { field Kinder; }
+
+  mapping for zsad_mitarbeiter
+    {
+      Id                 = id;
+      Vollname           = vollname;
+      Rolle              = rolle;
+      Steuertarif        = steuertarif;
+      Gehalt             = gehalt;
+      WieAlt             = wie_alt;
+      Erfahrung          = erfahrung;
+      Kinder             = kinder;
+      CreatedBy          = created_by;
+      CreatedAt          = created_at;
+      LastChangedBy      = last_changed_by;
+      LastChangedAt      = last_changed_at;
+      LocalLastChangedAt = local_last_changed_at;
+    }
+}
